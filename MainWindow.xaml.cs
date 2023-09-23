@@ -24,5 +24,25 @@ namespace collaboration
         {
             InitializeComponent();
         }
+
+        private void Bogdan_bt_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Igor_bt_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Denis_bt_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Sofa_bt_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
