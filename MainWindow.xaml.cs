@@ -15,14 +15,14 @@ using System.Windows.Shapes;
 using System.Runtime.InteropServices;
 namespace collaboration
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-
         [DllImport("user32.dll", CharSet = CharSet.Unicode)]
         public static extern int MessageBox(IntPtr hWnd, string text, string caption, uint type);
+
+        private string name = "";
+        private string email = "";
+        private string information = "";
 
         public MainWindow()
         {
@@ -31,19 +31,8 @@ namespace collaboration
 
         private void ShowMessageBox_Click(object sender, RoutedEventArgs e)
         {
-            string name = nameTB.Text;
-            string email = emailTB.Text;
-            string information = infoTB.Text;
-
-            if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(email))
-            {
-                MessageBoxBase messageBoxBase = new MessageBoxBase();
-                messageBoxBase.ShowMessageBox(name, email, information);
-            }
-            else
-            {
-                MessageBox(IntPtr.Zero, "Будь ласка, введіть ім'я та email.", "Помилка", 0x10);
-            }
+            MessageBoxBase messageBoxBase = new MessageBoxBase();
+            messageBoxBase.ShowMessageBox(name, email, information);
         }
 
         class MessageBoxBase
@@ -57,6 +46,5 @@ namespace collaboration
                 MessageBox(IntPtr.Zero, message, "Про автора", 0x40);
             }
         }
-
     }
 }
