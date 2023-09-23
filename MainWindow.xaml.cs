@@ -29,18 +29,33 @@ namespace collaboration
             InitializeComponent();
         }
 
+        private void ShowMessageBox_Click(object sender, RoutedEventArgs e)
+        {
+            string name = nameTB.Text;
+            string email = emailTB.Text;
+            string information = infoTB.Text;
+
+            if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(email))
+            {
+                MessageBoxBase messageBoxBase = new MessageBoxBase();
+                messageBoxBase.ShowMessageBox(name, email, information);
+            }
+            else
+            {
+                MessageBox(IntPtr.Zero, "Будь ласка, введіть ім'я та email.", "Помилка", 0x10);
+            }
+        }
+
         class MessageBoxBase
         {
             public void ShowMessageBox(string name, string email, string information)
             {
                 // Створити повідомлення з інформацією користувача
-                string message = $"Ім'я: {name} \nEmail: {email}\n Дополнительная информаци: {information}";
+                string message = $"Ім'я: {name} \nEmail: {email}\nДодаткова інформація: {information}";
 
                 // Відобразити MessageBox з інформацією про автора
                 MessageBox(IntPtr.Zero, message, "Про автора", 0x40);
             }
-
-
         }
 
     }

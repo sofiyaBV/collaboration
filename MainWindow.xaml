@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <TextBox x:Name="nameTB" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="200" />
+        <TextBox x:Name="emailTB" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="200" />
+        <TextBox x:Name="infoTB" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Width="200" />
+        <Button Content="Показати MessageBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="10,100,0,0" Click="ShowMessage_Click"/>
     </Grid>
 </Window>
