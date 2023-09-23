@@ -31,12 +31,7 @@ namespace collaboration
             InitializeComponent();
         }
 
-        // Метод вывода с помощью кнопки
-        private void ShowMessageBox_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBoxBase messageBoxBase = new MessageBoxBase();
-            messageBoxBase.ShowMessageBox(name, email, information);
-        }
+
 
         // Сам класс где мы реализуем сам вывод информации про пользователя черещ MessageBox
         class MessageBoxBase
@@ -49,6 +44,27 @@ namespace collaboration
                 // Відобразити MessageBox з інформацією про автора
                 MessageBox(IntPtr.Zero, message, "For autor", 0x40);
             }
+         }
+            
+        private void Bogdan_bt_Click(object sender, RoutedEventArgs e)
+        {
+             MessageBoxBase messageBoxBase = new MessageBoxBase();
+            messageBoxBase.ShowMessageBox(name, email, information);
+        }
+
+        private void Igor_bt_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Denis_bt_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Sofa_bt_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

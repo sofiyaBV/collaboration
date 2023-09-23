@@ -18,10 +18,10 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button Content="Кменний Богдан" x:Name="Bogdan_bt" Grid.Column="0" Grid.Row="1" Width="150" Height="50"/>
-        <Button Content="Бондар Ігор" x:Name="Igor_bt" Grid.Column="1" Grid.Row="1" Width="150" Height="50"/>
-        <Button Content="Добровольсбкий Денис" x:Name="Denis_bt" Grid.Column="2" Grid.Row="1" Width="150" Height="50" Click="ShowMessageBox_Click"/>
-        <Button Content="Бондар Софія" x:Name="Sofiya_bt" Grid.Column="3" Grid.Row="1" Width="150" Height="50"/>
+        <Button Content="Кменний Богдан" x:Name="Bogdan_bt" Grid.Column="0" Grid.Row="1" Width="150" Height="50" Click="Bogdan_bt_Click"/>
+        <Button Content="Бондар Ігор" x:Name="Igor_bt" Grid.Column="1" Grid.Row="1" Width="150" Height="50" Click="Igor_bt_Click"/>
+        <Button Content="Добровольсбкий Денис" x:Name="Denis_bt" Grid.Column="2" Grid.Row="1" Width="150" Height="50" Click="Denis_bt_Click"/>
+        <Button Content="Бондар Софія" x:Name="Sofiya_bt" Grid.Column="3" Grid.Row="1" Width="150" Height="50" Click="Sofa_bt_Click"/>
 
     </Grid>
 </Window>
