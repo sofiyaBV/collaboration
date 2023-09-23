@@ -24,5 +24,15 @@ namespace collaboration
         {
             InitializeComponent();
         }
+
+        private void name_bt_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void close_bt_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="name_tb" Width="200" Height="50" FontSize="20" Grid.Column="1" />
+        <Button x:Name="name_bt" Width="200" Height="50" Content="Змінити назву" FontSize="20" Click="name_bt_Click"/>
+        <Button x:Name="close_bt" Width="200" Height="50" Content="Закрити вікно" FontSize="20" Grid.Row="1" Click="close_bt_Click"/>
+        
     </Grid>
 </Window>
