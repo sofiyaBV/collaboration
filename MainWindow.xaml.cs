@@ -12,22 +12,44 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.Runtime.InteropServices;
 namespace collaboration
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        // Импорт с библиотеки user32.dll для взаимодействия с методами MessageBox
+        [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+       // Инициализация самого MessageBox
+        public static extern int MessageBox(IntPtr hWnd, string text, string caption, uint type);
+
+        private string name = "Денис";
+        private string email = "denis@gmail.com";
+        private string information = "Super puper programmer in the WORLD!!!";
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
+
+
+        // Сам класс где мы реализуем сам вывод информации про пользователя черещ MessageBox
+        class MessageBoxBase
+        {
+            public void ShowMessageBox(string name, string email, string information)
+            {
+                // Створити повідомлення з інформацією користувача
+                string message = $"Name: {name} \nEmail: {email}\nInformation: {information}";
+
+                // Відобразити MessageBox з інформацією про автора
+                MessageBox(IntPtr.Zero, message, "For autor", 0x40);
+            }
+         }
+            
         private void Bogdan_bt_Click(object sender, RoutedEventArgs e)
         {
-
+             MessageBoxBase messageBoxBase = new MessageBoxBase();
+            messageBoxBase.ShowMessageBox(name, email, information);
         }
 
         private void Igor_bt_Click(object sender, RoutedEventArgs e)
