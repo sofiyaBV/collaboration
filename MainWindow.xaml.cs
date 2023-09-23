@@ -17,7 +17,9 @@ namespace collaboration
 {
     public partial class MainWindow : Window
     {
+        // Импорт с библиотеки user32.dll для взаимодействия с методами MessageBox
         [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+       // Инициализация самого MessageBox
         public static extern int MessageBox(IntPtr hWnd, string text, string caption, uint type);
 
         private string name = "Денис";
@@ -29,12 +31,14 @@ namespace collaboration
             InitializeComponent();
         }
 
+        // Метод вывода с помощью кнопки
         private void ShowMessageBox_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxBase messageBoxBase = new MessageBoxBase();
             messageBoxBase.ShowMessageBox(name, email, information);
         }
 
+        // Сам класс где мы реализуем сам вывод информации про пользователя черещ MessageBox
         class MessageBoxBase
         {
             public void ShowMessageBox(string name, string email, string information)
