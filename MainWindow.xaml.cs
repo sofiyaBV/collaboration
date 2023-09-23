@@ -20,9 +20,9 @@ namespace collaboration
         [DllImport("user32.dll", CharSet = CharSet.Unicode)]
         public static extern int MessageBox(IntPtr hWnd, string text, string caption, uint type);
 
-        private string name = "";
-        private string email = "";
-        private string information = "";
+        private string name = "Денис";
+        private string email = "denis@gmail.com";
+        private string information = "Super puper programmer in the WORLD!!!";
 
         public MainWindow()
         {
@@ -40,10 +40,10 @@ namespace collaboration
             public void ShowMessageBox(string name, string email, string information)
             {
                 // Створити повідомлення з інформацією користувача
-                string message = $"Ім'я: {name} \nEmail: {email}\nДодаткова інформація: {information}";
+                string message = $"Name: {name} \nEmail: {email}\nInformation: {information}";
 
                 // Відобразити MessageBox з інформацією про автора
-                MessageBox(IntPtr.Zero, message, "Про автора", 0x40);
+                MessageBox(IntPtr.Zero, message, "For autor", 0x40);
             }
         }
     }

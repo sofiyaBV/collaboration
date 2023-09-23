@@ -7,9 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="nameTB" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="200" />
-        <TextBox x:Name="emailTB" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="200" />
-        <TextBox x:Name="infoTB" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Width="200" />
-        <Button Content="Показати MessageBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="10,100,0,0" Click="ShowMessage_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Content="Кменний Богдан" x:Name="Bogdan_bt" Grid.Column="0" Grid.Row="1" Width="150" Height="50"/>
+        <Button Content="Бондар Ігор" x:Name="Igor_bt" Grid.Column="1" Grid.Row="1" Width="150" Height="50"/>
+        <Button Content="Добровольсбкий Денис" x:Name="Denis_bt" Grid.Column="2" Grid.Row="1" Width="150" Height="50" Click="ShowMessageBox_Click"/>
+        <Button Content="Бондар Софія" x:Name="Sofiya_bt" Grid.Column="3" Grid.Row="1" Width="150" Height="50"/>
+
     </Grid>
 </Window>
